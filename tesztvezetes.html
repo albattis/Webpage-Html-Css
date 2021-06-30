@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jelentkezés tesztvezetésre</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/astra.css">
+    <!--Albert Attila-->
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-danger">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="tesztvezetes.html">Tesztvezetés</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link " aria-current="page" href="index.html#astra">Astra</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="index.html#design">Design</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " aria-current="page" href="index.html#colours">Colours</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="tesztvezetes.html">Tesztvezetés</a>
+              </li>
+              
+          </div>
+        </div>
+      </nav>
+      
+<form action="tesztvezetes.html" class="" method="POST">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h1>Jelentkezés tesztvezetésre</h1>
+            </div>
+            <div class="col-md-4">
+                <label for="nev"class="form-label">Név</label><br>
+                    <input type="text" class="form-control"id="nev"><br>
+                    <label for="kor"class="form-label">Kor</label><br>
+                    <input type="text"class="form-control" id="kor">
+                    <br><input type="submit" class="btn btn-primary" value="Küldés" onclick="ellenoriz()">
+            </div>
+            <div class="col-md-4">
+                <label for="telefon"class="form-label">Telefon</label><br>
+                    <input tpye="text" class="form-control"id="telefon"><br>
+                    <label for="mikor"class="form-label">Mikor</label><br>
+                   <input type="date"class="form-control" name="da" id="mikor">
+                   <script>document.getElementById("mikor").value=moment().format('YYYY-MM-DD');</script>
+                    
+            </div>
+
+            <div class="col-md-4">
+                <label for="mail"class="form-label">E-Mail</label><br>
+                <input type="email" class="form-control"id="mail"></div>
+        </div>
+    </div>
+    <script>
+        function ellenoriz() {
+            var a=document.getElementById("kor").value;
+            if(a<25)
+            {
+                alert("Sajnos csak az vezethet, aki már betöltötte a 25. életévét.");
+            }
+        }
+    </script>
+</form>
+
+    </body>
